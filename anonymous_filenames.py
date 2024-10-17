@@ -5,6 +5,7 @@ from random import randint
 
 def generate_random_name(length, prefix):
     name = ''.join(f'{randint(0, 15):x}' for _ in range(length))        # Random hex string of length
+    name = name.upper()
     return f'{prefix}_{name}.pdf'
 
 
